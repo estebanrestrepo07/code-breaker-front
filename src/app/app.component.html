@@ -1,0 +1,12 @@
+<div>
+  <button id="setValue" (click)="setSecret()">Get New Secret</button>
+  <h6 id="stateValue">{{state}}</h6>
+</div>
+<div *ngIf="state" id="codeBreaker">
+  <h1 id="resValue" *ngIf="result">{{result}}</h1>
+  <input id="codeValue" type="text" [(ngModel)]="codebreaker">
+  <button id="tryValue" (click)="match()">Match Secret</button>
+  <div id="attempts">
+    {{attempts}}
+  </div>
+</div>
